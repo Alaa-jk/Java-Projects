@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/Uebung_3/ArrayCopy.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_3/CheckPalindrome.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_3/ComputeISBN.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_3/Euklid.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_9/BettingOffice.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_9/Cockroach.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_9/RoachRace.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/Uebung_9/RoachRaceTestClient.java" charset="ISO-8859-1" />
+  </component>
+</project>
