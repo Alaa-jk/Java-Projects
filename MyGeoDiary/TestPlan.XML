@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testPlan>
+    <testDaten>
+        <TestPerson1TestDaten1>
+            <BewegungsAbschnitte>
+                <Fuss von="2022-04-29T12:58:28" bis="2022-04-29T13:29:52"/>
+                <Auto von="2022-04-29T13:29:52" bis="2022-04-29T13:34:28" />
+                <Fuss von="2022-04-29T13:34:28" bis="2022-04-29T14:27:02"/>
+                <Auto von="2022-04-29T14:27:02" bis="2022-04-29T15:09:09" />
+                <Fuss von="2022-04-29T15:09:09" bis="2022-04-30T17:40:28" /> 
+                <Auto von="2022-04-30T17:40:28" bis="2022-04-30T17:44:24" />
+                <Fuss von="2022-04-30T17:44:24" bis="2022-04-30T17:54:00" /> 
+                <Auto von="2022-04-30T17:54:00" bis="2022-04-30T18:14:36" />
+                <Fuss von="2022-04-30T18:14:36" bis="2022-04-30T18:26:36" /> 
+            </BewegungsAbschnitte>
+        </TestPerson1TestDaten1>
+
+        <TestPerson2TestDaten1>
+            <BewegungsAbschnitte>
+                <Fuss von="2022-04-29T12:55:01" bis="2022-04-29T13:31:38"/>
+                <Auto von="2022-04-29T13:31:38" bis="2022-04-29T13:34:30" />
+                <Fuss von="2022-04-29T13:34:30" bis="2022-04-29T14:26:39"/>
+                <Auto von="2022-04-29T14:26:39" bis="2022-04-29T15:02:59" />
+                <Fuss von="2022-04-29T15:02:59" bis="2022-04-30T10:25:13" /> 
+                <Auto von="2022-04-30T10:25:13" bis="2022-04-30T10:44:38" />
+                <Fuss von="2022-04-30T10:44:38" bis="2022-04-30T15:18:15" /> 
+            </BewegungsAbschnitte>
+        </TestPerson2TestDaten1>
+
+        <TestPerson3Datensatz1>
+            <BewegungsAbschnitte>
+                <Fuss von="2023-05-31T10:18:53" bis="2023-05-31T10:59:37"/>
+                <Auto von="2023-05-31T10:59:37" bis="2023-05-31T11:03:16"/>
+                <Fuss von="2023-05-31T11:03:16" bis="2023-05-31T12:50:20"/>
+                <Auto von="2023-05-31T12:50:20" bis="2023-05-31T12:54:11"/>
+                <Fuss von="2023-05-31T12:54:11" bis="2023-05-31T13:09:00"/>
+                <Fahrrad von="2023-05-31T13:09:00" bis="2023-05-31T13:46:14"/> 
+                <Fuss von="2023-05-31T13:46:14" bis="2023-05-31T13:53:04"/>
+                <Fahrrad von="2023-05-31T13:53:04" bis="2023-05-31T14:01:14"/>
+                <Fuss von="2023-05-31T14:01:14" bis="2023-05-31T14:25:16"/>
+            </BewegungsAbschnitte>
+        </TestPerson3Datensatz1>
+
+        <TestPerson3Datensatz2>
+            <BewegungsAbschnitte>
+                <Fuss von="2023-05-31T06:01:02" bis="2023-05-31T06:15:31"/>
+                <Fahrrad von="2023-05-31T06:15:31" bis="2023-05-31T06:19:20"/> 
+                <Fuss von="2023-05-31T06:19:20" bis="2023-05-31T06:29:02"/>
+                <Fahrrad von="2023-05-31T06:29:02" bis="2023-05-31T07:12:32"/>
+                <Fuss von="2023-05-31T07:12:32" bis="2023-05-31T07:18:04"/>
+            </BewegungsAbschnitte>
+        </TestPerson3Datensatz2>
+
+        <TestPerson3Datensatz3>
+            <BewegungsAbschnitte>
+                <Fuss von="2023-06-01T04:15:31" bis="2023-06-01T04:34:09"/>
+                <Tram von="2023-06-01T04:34:09" bis="2023-06-01T04:59:11"/>
+                <Fuss von="2023-06-01T04:59:11" bis="2023-06-01T13:26:19"/>
+                <Zug von="2023-06-01T13:26:19" bis="2023-06-01T13:32:13"/>
+                <Fuss von="2023-06-01T13:32:13" bis="2023-06-01T14:07:06"/>
+                <Tram von="2023-06-01T14:07:06" bis="2023-06-01T14:09:24"/>
+                <Fuss von="2023-06-01T14:09:24" bis="2023-06-01T15:13:15"/>               
+            </BewegungsAbschnitte>
+        </TestPerson3Datensatz3>
+
+
+        <TestPerson4Datensatz1>
+            <BewegungsAbschnitte>
+                <Fuss von="2023-06-02T12:05:42" bis="2023-06-02T14:23:30"/>
+                <Auto von="2023-06-02T14:23:30" bis="2023-06-02T15:09:07"/>
+                <Fuss von="2023-06-02T15:09:07" bis="2023-06-02T15:19:10"/>
+                <Zug von="2023-06-02T15:19:10" bis="2023-06-02T17:37:31"/>
+                <Fuss von="2023-06-02T17:37:31" bis="2023-06-02T17:38:34"/>
+            </BewegungsAbschnitte>
+        </TestPerson4Datensatz1>
+
+        <TestPerson4Datensatz2>
+            <BewegungsAbschnitte>
+                <Fuss von="2023-06-01T11:12:13" bis="2023-06-01T11:31:06"/>
+            </BewegungsAbschnitte>
+        </TestPerson4Datensatz2>
+
+
+    </testDaten>     
+
+
+    <statistischeHypothesen> <!-- H0 Hypothesen -->
+        <FussThese minWkt="0.95">
+            <H0-These> Zu weniger als 95% werden richtig Zugeordnet </H0-These>     
+            <H1-These> Zu mehr als 95% werden richtig Zugeordnet </H1-These>     
+        </FussThese>
+        <FahrradThese minWkt="0.95">
+            <H0-These> Zu weniger als 95% werden richtig Zugeordnet </H0-These>     
+            <H1-These> Zu mehr als 95% werden richtig Zugeordnet </H1-These>     
+        </FahrradThese>
+        <AutoThese minWkt="0.95">
+            <H0-These> Zu weniger als 95% werden richtig Zugeordnet </H0-These>     
+            <H1-These> Zu mehr als 95% werden richtig Zugeordnet </H1-These>     
+        </AutoThese>
+
+    </statistischeHypothesen>
+</testPlan> 

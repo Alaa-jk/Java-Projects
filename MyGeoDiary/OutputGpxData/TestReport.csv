@@ -1,0 +1,47 @@
+Uebersicht ueber die Segmente; 
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;254219;99.9889858743839%;1;14
+Fahrrad;5563;99.22703577206543%;10;20
+Tram;1640;99.8170731707317%;1;3
+Zug;8655;99.84979780473715%;6;10
+Auto;10979;93.79724929410693%;68;417
+ 
+ 
+ 
+ TestPerson1TestDaten1.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;101813;99.99705342146878%;0;2
+Auto;4275;98.57309941520468%;15;36
+
+TestPerson2TestDaten1.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;91477;100.0%;0;0
+Auto;3517;98.77736707421097%;14;37
+
+TestPerson3Datensatz1.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;11609;100.0%;0;0
+Fahrrad;2724;99.26578560939795%;10;20
+Auto;450;64.44444444444444%;80;93
+
+TestPerson3Datensatz2.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;1783;99.38306225462703%;3;6
+Fahrrad;2839;99.18985558295175%;11;13
+
+TestPerson3Datensatz3.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;37470;100.0%;0;0
+Tram;1640;99.8170731707317%;1;3
+Zug;354;99.15254237288136%;3;3
+
+TestPerson4Datensatz1.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;8934;100.0%;0;0
+Zug;8301;99.87953258643537%;10;10
+Auto;2737;84.76434051881621%;417;417
+
+TestPerson4Datensatz2.gpx
+ Bewegungsart;Gesamtzeit in sec;Erfolgsrate;Durchschnittliche Abweichung in sec;Hoehste Abweichung in sec 
+ Fuss;1133;98.76434245366285%;14;14
+
