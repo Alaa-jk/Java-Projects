@@ -1,0 +1,99 @@
+<!--<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Anmeldung </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous" />
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div>
+        <img class="img-fluid"  />
+    </div>
+    <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+         
+        <div class="border border-secondary p-3 rounded">
+            <p>Zugang auf System</p>
+            <p>
+                <input type="text" name="username" class="form-control" placeholder="" required autofocus/>
+            </p>
+            <p>
+                <input type="password" name="password" class="form-control" placeholder="Password" required />
+            </p>
+            <p>
+                <input type="checkbox" name="remember-me" />&nbsp;Remember Me
+            </p>
+            <p>
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </p>
+        </div>
+    </form>      
+</div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login - Physiotherapie</title>
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/fonts/fontawesome-all.min.css}">
+</head>
+
+<body class="bg-gradient-primary" style="color: var(--bs-blue);background: rgb(45,113,89);">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 col-xxl-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h4 class="text-dark mb-4">Willkommen!</h4>
+                                </div>
+
+                                <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;" class="user">
+                                    <div th:if="${param.error}">
+
+                                        <div style="border: solid red 2px;  margin: 5px; margin-bottom: 10px ;color: red">
+Nutzername oder Passwort sind falsch.
+                                        </div>
+                                    </div>
+                                    <div th:if="${param.logout}">
+                                        Du wurdest ausgeloggt.
+                                    </div>
+
+                                    <div class="mb-3"><input class="form-control form-control-user" required autofocus  type="text" id="exampleInputEmail"  placeholder="Nutzername eingeben..." name="username"></div>
+                                    <div class="mb-3"><input class="form-control form-control-user" required type="password" id="exampleInputPassword" placeholder="Passwort eingeben..." name="password"></div>
+                                    <div class="mb-3">
+                                        <div class="custom-control custom-checkbox small"></div>
+                                    </div><button class="btn btn-primary d-block btn-user w-100" type="submit" style="background: rgb(45,113,89);">Login</button>
+                                    <hr>
+                                </form>
+                                <div class="text-center"></div>
+                                <div class="text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

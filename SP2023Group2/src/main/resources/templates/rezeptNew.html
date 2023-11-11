@@ -1,0 +1,195 @@
+<!--<html lang="en" style>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Dashboard - Physiotherapie</title>
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/fonts/fontawesome-all.min.css}">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(45,113,89);">
+        <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-clinic-medical" style="transform: rotate(14deg);"></i></div>
+            <div class="sidebar-brand-text mx-3"><span style="padding-left: -17px;">PhysGenie</span></div>
+        </a>
+            <hr class="sidebar-divider my-0" />
+            <ul id="accordionSidebar" class="navbar-nav text-light">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Katalogleistungen</span></a></li>
+                <li class="nav-item"><a class="nav-link active" href="table.html"><i class="far fa-window-maximize"></i><span>Rezeptverwaltung</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="table.html"><i class="far fa-calendar-check"></i><span>Terminplaner</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-barcode"></i><span>Leistungsabrechnung</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="table.html"><i class="far fa-address-card"></i><span>Personalverwaltung</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="table.html"><i class="far fa-address-card"></i><span>Patientenverwaltung</span></a></li>
+
+            </ul>
+            <div class="text-center d-none d-md-inline"><button id="sidebarToggle" class="btn rounded-circle border-0" type="button"></button></div>
+        </div>
+    </nav>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-dark mb-0" style="padding: -1px;padding-top: 26px;">Neues Rezept integrieren</h3>
+                </div>
+            </div>
+            <div class="card shadow mb-4" style="margin-left: 20px;margin-right: 20px;margin-top: 10px;">
+                <div class="card-header py-3">
+                    <h6 class="text-primary m-0 fw-bold"><span style="color: rgb(45, 113, 89);">Rezeptinformationen hinzufügen</span></h6>
+                </div>
+                <div class="card-body"><label class="form-label">Personenidentifikation:</label><select style="margin-left: 10px;">
+                    <optgroup label="Personen">
+                        <option value="12" selected>Element1</option>
+                    </optgroup>
+                </select>
+                    <div><label class="form-label">Zulassungsnummer:</label><input type="text" style="margin-left: 10px;width: 297.143px;" /></div>
+                    <div><label class="form-label">Diagnosenummer:</label><input type="text" style="margin-left: 10px;width: 297.143px;" /></div>
+                    <div><label class="form-label">Bundesland:</label><select style="margin-left: 10px;">
+                        <optgroup label="Bundesländer">
+                            <option value="12" selected>Niedersachsen</option>
+                        </optgroup>
+                    </select></div>
+                    <div><label class="form-label">Personenkreiszugehörigkeit:</label><select style="margin-left: 10px;">
+                        <optgroup label="Personenkreise">
+                            <option value="12" selected>Familienangehöriger</option>
+                        </optgroup>
+                    </select></div>
+                    <div><label class="form-label">Krankenkasse:</label><select style="margin-left: 10px;">
+                        <optgroup label="Krankenkassen">
+                            <option value="12" selected>AOK</option>
+                        </optgroup>
+                    </select></div>
+                </div>
+            </div><button class="btn btn-primary" type="button" style="margin-left: 20px;background: rgb(45,113,89);">Speichern</button>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © PHYSGENIE 2023</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+</body>
+<script th:src="@{/resources/css/bootstrap.min.js}"></script>
+<script th:src="@{/resources/css/theme.js}"></script>
+</html>-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Physiotherapie</title>
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/fonts/fontawesome-all.min.css}">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(45,113,89);">
+        <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-clinic-medical" style="transform: rotate(14deg);"></i></div>
+            <div class="sidebar-brand-text mx-3"><span style="padding-left: -17px;">PhysGenie</span></div>
+        </a>
+            <hr class="sidebar-divider my-0">
+            <ul id="accordionSidebar" class="navbar-nav text-light">
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/Katalogleistungen}"><i class="fas fa-tachometer-alt"></i><span>Katalogleistungen</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link active" th:href="@{/rezepte}"><i class="far fa-window-maximize"></i><span>Rezeptverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal','therapeut')" class="nav-link"  th:href="@{/terminplanung}"><i class="far fa-calendar-check"></i><span>Terminplaner</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss')"   class="nav-link" th:href="@{/personal}"><i class="far fa-address-card"></i><span>Personalverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/patient}"><i class="far fa-address-card"></i><span>Patientenverwaltung</span></a></li>
+                <li class="nav-item"><a  class="nav-link" th:href="@{/logout}"><span>Logout</span></a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <form method="post" role="form" id="form" th:action="@{/rezepte/rezeptNew}">
+
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0" style="padding: -1px;padding-top: 26px;">Neues Rezept</h3>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4" style="margin-left: 20px;margin-right: 20px;margin-top: 10px;">
+                    <div class="card-header py-3">
+                        <h6 class="text-primary m-0 fw-bold"><span style="color: rgb(45, 113, 89);">Rezeptinformation eintragen</span></h6>
+                    </div>
+
+
+                    <div class="card-body"><label class="form-label">Personenidentifikation:</label>
+                    </br>
+                        <label for="personalId">Personal ID : Name</label>
+                        <select id="personalId" name="personalId" style="margin-left: 10px;" required>
+                            <optgroup th:each=" e : ${session.personalMap}">
+                                <option th:value="${e.key}" th:text="${e.key.substring(e.key.lastIndexOf('@') + 1)} + ' : ' + ${e.value}"></option>
+                            </optgroup>
+                        </select>
+                        </br>
+                        <label for="patientId">Patient ID : Name</label>
+                        <select id="patientId" name="patientId" style="margin-left: 10px;" required>
+                            <optgroup th:each=" e : ${session.patientMap}">
+                                <option th:value="${e.key}" th:text="${e.key} + ' : ' + ${e.value}"></option>
+                            </optgroup>
+                        </select>
+
+                        <div><label for="approvalNumber" class="form-label">Zulassungsnummer:</label>
+                            <input id="approvalNumber" name="approvalNumber" type="text" 
+                                   inputmode="numeric" pattern="[0-9\s]{9}" placeholder="xxxxxxx57"
+                                   required="required" style="margin-left: 10px;width: 297.143px;" /></div>
+
+                        <div><label class="form-label" for="diagnosisNumber">Diagnosenummer:</label>
+                            <input id="diagnosisNumber" name="diagnosisNumber" required="required" type="text" 
+                                   pattern="[A-Z][0-9]{2}(\.?)(.*)" placeholder="X00" style="margin-left: 10px;width: 297.143px;" /></div>
+
+                        <div><label class="form-label">Bundesland:</label>
+                            <select id="province" name="province" style="margin-left: 10px;">
+                                <optgroup label="Bundesländer">
+                                    <option th:value="Niedersachsen" th:text="Niedersachsen">Niedersachsen</option>
+                                    <option th:value="Sachsen" th:text="Sachsen">Sachsen</option>
+                                    <option th:value="Bayern" th:text="Bayern">Bayern</option>
+                                    <option th:value="Sachsen-Anhalt" th:text="Sachsen-Anhalt">Niedersachsen</option>
+                                    <option th:value="Berlin" th:text="Berlin">Sachsen</option>
+                                    <option th:value="Mecklenburg-Vorpommern" th:text="Mecklenburg-Vorpommern">Bayern</option>
+                                    <option th:value="Thüringen" th:text="Thüringen">Niedersachsen</option>
+                                    <option th:value="Baden-Württenberg" th:text="Baden-Württenberg">Sachsen</option>
+                                    <option th:value="Brandenburg" th:text="Brandenburg">Bayern</option>
+                                    <option th:value="Schleswig-Holstein" th:text="Schleswig-Holstein">Niedersachsen</option>
+                                    <option th:value="Hamburg" th:text="Hamburg">Sachsen</option>
+                                    <option th:value="Bremen" th:text="Bremen">Bayern</option>
+                                    <option th:value="Nordrhein-Westfalen" th:text="Nordrhein-Westfalen">Niedersachsen</option>
+                                    <option th:value="Hessen" th:text="Hessen">Sachsen</option>
+                                    <option th:value="Rheinland-Pfalz" th:text="Rheinland-Pfalz">Bayern</option>
+                                    <option th:value="Saaland" th:text="Saaland">Niedersachsen</option>
+                                    <option th:value="Mecklenburg-Vorpommern" th:text="Mecklenburg-Vorpommern">Sachsen</option>
+                                </optgroup>
+                            </select></div>
+
+                        <div><label class="form-label">Personenkreiszugehörigkeit:</label>
+                            <select id="personalGroup" name="personalGroup" style="margin-left: 10px;">
+                                <optgroup label="Personenkreise">
+                                    <option value="Rentner">Rentner</option>
+                                    <option value="Mitglied">Mitglied</option>
+                                    <option value="Familienangehoeriger">Familienangehoeriger</option>
+                                </optgroup>
+                            </select></div>
+                    </div>
+                </div><button class="btn btn-primary" type="submit" style="margin-left: 20px;background: rgb(45,113,89);">Speichern</button>
+            </form>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © PHYSGENIE 2023</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+</body>
+<script th:src="@{/resources/css/bootstrap.min.js}"></script>
+<script th:src="@{/resources/css/theme.js}"></script>
+</html>

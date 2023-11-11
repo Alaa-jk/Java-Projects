@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" style  xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Physiotherapie</title>
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/fonts/fontawesome-all.min.css}">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(45,113,89);">
+        <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-clinic-medical" style="transform: rotate(14deg);"></i></div>
+            <div class="sidebar-brand-text mx-3"><span style="padding-left: -17px;">PhysGenie</span></div>
+        </a>
+            <hr class="sidebar-divider my-0">
+            <ul id="accordionSidebar" class="navbar-nav text-light">
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link active" th:href="@{/Katalogleistungen}"><i class="fas fa-tachometer-alt"></i><span>Katalogleistungen</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/rezepte}"><i class="far fa-window-maximize"></i><span>Rezeptverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal','therapeut')" class="nav-link"  th:href="@{/terminplanung}"><i class="far fa-calendar-check"></i><span>Terminplaner</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" href="table.html"><i class="fas fa-barcode"></i><span>Leistungsabrechnung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss')"   class="nav-link" th:href="@{/personal}"><i class="far fa-address-card"></i><span>Personalverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/patient}"><i class="far fa-address-card"></i><span>Patientenverwaltung</span></a></li></ul>
+            <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+        </div>
+    </nav>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-dark mb-0" style="padding: -1px;padding-top: 26px;">Fehlermeldung</h3>
+                </div>
+            </div>
+            <div class="card shadow mb-4" style="margin-left: 20px;margin-right: 20px;margin-top: 10px;">
+                <div class="card-header py-3">
+                    <h6 class="text-primary m-0 fw-bold"><span style="color: rgb(45, 113, 89);"
+                        th:text="'Der Preis der Leistungsart kann nicht geändert werden, weil es darauf
+                        referenzierende Rezepte existieren: '">
+                    </span></h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>RezeptID</th><th>Patientname</th><th>Personalname</th>
+                            </tr>
+                            </thead>
+                            <tbody th:each="prescription : ${prescriptions}">
+                            <tr>
+                                <td><h3 th:text="${prescription.getId()}"></h3></td>
+                                <td><h3 th:text="${prescription.getPatient().getLastname()}"></h3></td>
+                                <td><h3 th:text="${prescription.getPersonal().getLastname()}"></h3></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><a th:href="@{/Katalogleistungen}">Zurück zur Katalogleistung</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © PHYSGENIE 2023</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<script th:src="@{/resources/css/bootstrap.min.js}"></script>
+<script th:src="@{/resources/css/theme.js}"></script>
+</body>
+
+</html>

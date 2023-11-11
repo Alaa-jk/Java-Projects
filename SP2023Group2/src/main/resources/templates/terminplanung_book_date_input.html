@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Physiotherapie</title>
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/fonts/fontawesome-all.min.css}">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgb(45,113,89);">
+        <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-clinic-medical" style="transform: rotate(14deg);"></i></div>
+            <div class="sidebar-brand-text mx-3"><span style="padding-left: -17px;">PhysGenie</span></div>
+        </a>
+            <hr class="sidebar-divider my-0">
+            <ul id="accordionSidebar" class="navbar-nav text-light">
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/Katalogleistungen}"><i class="fas fa-tachometer-alt"></i><span>Katalogleistungen</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/rezepte}"><i class="far fa-window-maximize"></i><span>Rezeptverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal','therapeut')" class="nav-link active"  th:href="@{/terminplanung}"><i class="far fa-calendar-check"></i><span>Terminplaner</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss')"   class="nav-link" th:href="@{/personal}"><i class="far fa-address-card"></i><span>Personalverwaltung</span></a></li>
+                <li class="nav-item"><a sec:authorize="hasAnyAuthority('boss','personal')"  class="nav-link" th:href="@{/patient}"><i class="far fa-address-card"></i><span>Patientenverwaltung</span></a></li>
+                <li class="nav-item"><a  class="nav-link" th:href="@{/logout}"><span>Logout</span></a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+                    <div class="container-fluid">
+                        <h3 class="text-dark mb-1" style="padding-top: 25px;">Terminplanungen</h3>
+                    </div>
+
+            <a th:href="@{/terminplanung}" class="btn btn-primary" type="submit" style="margin-left: 10px;margin-top: 8px;"> Zurück</a></br></br>
+
+            <form method="post" th:action="@{/terminplanung/book}">
+
+                <div class="card" style="margin-left: 20px;margin-right: 20px;margin-bottom: 10px;">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="far fa-calendar-plus"></i>Termininformation eingeben</h4>
+                        <div>
+                            <label for="rezeptId">Wählen Sie die Rezept ID</label></br>
+                            <select id="rezeptId" name="rezeptId" style="margin-left: 10px;" required>
+                                <optgroup th:each=" e : ${session.rezepte}">
+                                    <option th:value="${e.getId()}" th:text="${e.getId()}"></option>
+                                </optgroup>
+                            </select>
+                            </br>
+                            <label for="date">Wählen Sie den Tag für den Termin</label>
+                            <input id="date" name="date" type="date"
+                                   th:attr="min=${#dates.format(#dates.createNow(), 'yyyy-MM-dd')},max=${dateMax}" required></br>
+                            <label for="beginSlotIndex">Wählen Sie den Terminbegin</label></br>
+                            <select id="beginSlotIndex" name="beginSlotIndex" required="required">
+                                <option th:value="0">10:00</option>
+                                <option th:value="1">10:20</option>
+                                <option th:value="2">10:40</option>
+                                <option th:value="3">11:00</option>
+                                <option th:value="4">11:20</option>
+                                <option th:value="5">11:40</option>
+                                <option th:value="6">12:00</option>
+                                <option th:value="7">13:00</option>
+                                <option th:value="8">13:20</option>
+                                <option th:value="9">13:40</option>
+                                <option th:value="10">14:00</option>
+                                <option th:value="11">14:20</option>
+                            </select></br>
+                            <label for="therapistId">Wählen Sie den Therapoiten</label></br>
+                            <select id="therapistId" name="therapistId" style="margin-left: 10px;" required>
+                                <div th:each=" e : ${session.therapists}">
+                                    <option th:value="${e.getId()}" th:text="'ID: ' + ${e.getId()} + '  Name: ' + ${e.getLastname()}"></option>
+                                </div>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-primary" type="submit" style="margin-left: 10px;margin-top: 8px;">Weiter zur Angabe Leistungsart</button>
+            </form>
+
+                </div>
+            </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © PHYSGENIE 2023</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<script th:src="@{/resources/css/bootstrap.min.js}"></script>
+<script th:src="@{/resources/css/theme.js}"></script>
+</body>
+
+</html>

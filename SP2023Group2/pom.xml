@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Dear students, please *do not* change the following metadata. Thanks! -->
+
+	<artifactId>lab-kickstart</artifactId>
+	<version>3.0.2.BUILD-SNAPSHOT</version>
+
+	<name>Pro_spring</name>
+	<description>Template project for the ST lab</description>
+	<url>https://github.com/st-tu-dresden/kickstart</url>
+	<scm>
+		<url>https://github.com/st-tu-dresden/kickstart</url>
+	</scm>
+
+	<parent>
+		<groupId>de.tudresden.inf.st.lab</groupId>
+		<artifactId>st-lab-parent</artifactId>
+		<version>3.0.0</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<java.version>17</java.version>
+		<salespoint.version>8.0.0</salespoint.version>
+		<sonar.host.url>${env.STLAB_SONAR_HOST_URL}</sonar.host.url>
+		<sonar.login>${env.STLAB_SONAR_LOGIN}</sonar.login>
+		<argLine>-Xmx1G</argLine>
+	</properties>
+
+	<dependencies>
+    
+     
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-java8time</artifactId>
+			<version>3.0.4.RELEASE</version>
+		</dependency>
+		
+		
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+    <!-- Spring Boot -->
+				<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				</dependency>
+				<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				</dependency>
+					<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+				
+				<dependency> 
+                        <groupId>javax.xml.bind</groupId> 
+                        <artifactId>jaxb-api</artifactId> 
+                        <version>2.3.0</version> 
+</dependency>
+
+				
+				
+				
+				
+
+	</dependencies>
+
+	<repositories>
+
+		<repository>
+			<id>salespointframework</id>
+			<url>https://www.st.inf.tu-dresden.de/SalesPoint/repository</url>
+		</repository>
+
+	</repositories>
+
+</project>
